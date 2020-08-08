@@ -6,18 +6,30 @@
     <meta name="robots" content "noindex">
     <title>Speech to Text</title>
     <style type="text/css">
-    textarea {
-        font-size: 20px;
-        font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
-    }
-    input {
-        background-color: white;
-        color: black;
-        font-size: 20px;
-        font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
-        border-radius: 10px;
-    }
-    </style>
+        textarea {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 20px;
+          font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+          color: white;
+        }
+        #result_text {
+          margin-top: 40px;
+          background-color: #00F000;
+        }
+        input {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: white;
+          color: black;
+          font-size:20px;
+          font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;;
+          border-radius: 10px;
+        }
+        </style>
+
     <script>
         var flag_speech = 0;
  
@@ -54,7 +66,7 @@
                     }
                     else
                     {
-                        document.getElementById('result_text').innerHTML = "[途中] " + results[i][0].transcript;
+                        document.getElementById('result_text').innerHTML = "[認識途中] " + results[i][0].transcript;
                         flag_speech = 1;
                     }
                 }
